@@ -1,0 +1,19 @@
+<%
+  viewBag.pageCode = 'master';
+%>
+<% include ../common/header.ejs %>
+<!--begin body-->
+
+  <script type="text/javascript">
+    Ext.define("EPCM.header", {
+      statics: {
+        data: {
+          username: '<%= viewBag.username %>',
+          login_date: ''
+        }
+      }
+    });
+  </script>
+
+<!--end body-->
+<% include ../common/footer.ejs %>

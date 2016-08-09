@@ -1,0 +1,185 @@
+	<div class="layer advanced-search-layer" id="advanced-search-dialog">
+		<div class="layer-title">
+			<span class="page-title"><span class="text">高级搜索</span></span>
+			<a class="layer-close-btn" href="javascript:;"></a>
+		</div>
+		<div class="layer-cont-wrapper">
+			<div id="advanced-search-query">
+				<div class="grid-search clearfix">
+					<div class="data-item">
+						<span class="label">
+							<span title="品牌" class="text">品牌：</span>
+						</span>
+						<span class="form-select" data-special-select="form-select">
+					        <input type="hidden" autocomplete="off" data-name="brandCode" data-url="../combo/brand" data-type="select" value="" class="form-select-input" data-notClearOption="true">
+					        <a href="javascript:;" class="form-select-switch-btn">
+					        	<span title="" class="form-select-text"></span>
+					        </a>
+					        <ul style="display: none;" class="form-select-option-list">
+					        </ul>
+					     </span>
+					</div>
+					<div class="data-item">
+						<span class="label">
+							<span title="车系" class="text">车系：</span>
+						</span>
+						<span class="form-select" data-special-select="form-select">
+					        <input type="hidden" autocomplete="off" data-name="seriesCode" data-url="../combo/series?parentCode=" data-type="select" value="" class="form-select-input">
+					        <a href="javascript:;" class="form-select-switch-btn">
+					        	<span title="" class="form-select-text"></span>
+					        </a>
+					        <ul style="display: none;" class="form-select-option-list">
+					        </ul>
+					     </span>
+					</div>
+					<div class="data-item">
+						<span class="label">
+							<span title="车型" class="text">车型：</span>
+						</span>
+						<span class="form-select" data-special-select="form-select">
+					        <input type="hidden" autocomplete="off" data-name="modelCode" data-url="../combo/model?parentCode=" data-type="select" value="" class="form-select-input">
+					        <a href="javascript:;" class="form-select-switch-btn">
+					        	<span title="" class="form-select-text"></span>
+					        </a>
+					        <ul style="display: none;" class="form-select-option-list">
+					        </ul>
+					     </span>
+					</div>
+					<div class="data-item">
+						<span class="label">
+							<span title="整编车型" class="text">整编车型：</span>
+						</span>
+						<span class="form-select" data-special-select="form-select">
+					        <input type="hidden" autocomplete="off" data-name="subModelCode" data-url="../combo/subModel?parentCode=" data-type="select" value="" class="form-select-input">
+					        <a href="javascript:;" class="form-select-switch-btn">
+					        	<span title="" class="form-select-text"></span>
+					        </a>
+					        <ul style="display: none;" class="form-select-option-list">
+					        </ul>
+					     </span>
+					</div>
+					<div class="data-item">
+						<span class="label">
+							<span title="主组" class="text">主组：</span>
+						</span>
+						<span class="form-select" data-special-select="form-select">
+					        <input type="hidden" autocomplete="off" data-name="groupCode" data-url="../combo/group?parentCode=" data-type="select" value="" class="form-select-input">
+					        <a href="javascript:;" class="form-select-switch-btn">
+					        	<span title="" class="form-select-text"></span>
+					        </a>
+					        <ul style="display: none;" class="form-select-option-list">
+					        </ul>
+					     </span>
+					</div>
+					<div class="data-item">
+						<span class="label">
+							<span title="分组" class="text">分组：</span>
+						</span>
+						<span class="form-select" data-special-select="form-select">
+					        <input type="hidden" autocomplete="off" data-name="subGroupCode" data-url="../combo/subGroup?parentCode=" data-type="select" value="" class="form-select-input">
+					        <a href="javascript:;" class="form-select-switch-btn">
+					        	<span title="" class="form-select-text"></span>
+					        </a>
+					        <ul style="display: none;" class="form-select-option-list">
+					        </ul>
+					     </span>
+					</div>
+					<div class="data-item">
+						<span class="label">
+							<span title="图例编号" class="text">图例编号：</span>
+						</span>
+						<input type="text" data-name="imageCode" class="input-box">		
+					</div>
+					<div class="data-item">
+						<span class="label">
+							<span title="图例名称" class="text">图例名称：</span>
+						</span>
+						<input type="text" data-name="imageName" class="input-box">		
+					</div>
+					<div class="data-item">
+						<span class="label">
+							<span title="配件件号" class="text">配件件号：</span>
+						</span>
+						<input type="text" data-name="partNo" class="input-box">		
+					</div>
+					<div class="data-item">
+						<span class="label">
+							<span title="配件名称" class="text">配件名称：</span>
+						</span>
+						<input type="text" data-name="partName" class="input-box">		
+					</div>
+				</div>
+				<div class="layer-operation">
+					<a class="btn" href="javascript:;" data-id="search">查询</a>
+					<a class="btn" href="javascript:;" data-id="reset">重置</a>
+				</div>
+			</div>
+			<div class="grid" id="advanced-search-grid" data-urls='{"read":"/search/advancedSearch"}'>
+				<table>
+					<thead>
+						<tr>
+							<th style="width: 5%;">序号</th>
+							<th style="width: 8%;">配件件号</th>
+							<th style="width: 10%;">配件名称</th>
+							<th style="width: 5%;">用量</th>
+							<th style="width: 7%;">开始时间</th>
+							<th style="width: 7%;">结束时间</th>
+							<th style="width: 5%;">备注</th>
+							<th style="width: 8%;">品牌</th>
+							<th style="width: 8%;">车系</th>
+							<th style="width: 10%;">车型</th>
+							<th style="width: 5%;">组别</th>
+							<th style="width: 5%;">图例编号</th>
+							<th style="width: 10%;">图例名称</th>
+							<th style="width: 7%;">操作</th>
+						</tr>
+					</thead>
+					<tbody data-id="grid-result">
+						<script type="text/template">
+						{{#list}}
+							<tr>
+								<td>{{rowNumber}}</td>
+								<td>{{partNo}}</td>
+								<td>{{partName}}</td>
+								<td>{{qty}}</td>
+								<td>{{startDate}}</td>
+								<td>{{endDate}}</td>
+								<td>{{usageNote}}</td>
+								<td>{{brandName}}</td>
+								<td>{{seriesName}}</td>
+								<td>{{modelName}}</td>
+								<td>{{modelGroupName}}</td>
+								<td>{{imageCode}}</td>
+								<td>{{imageName}}</td>
+								<td>
+									<a href="javascript:;" data-action="goto-catalog" class="text-link">进入目录</a>
+									<a href="javascript:;" data-action="add-cart" class="icon-btn cart"><span class="icon"></span></a>
+								</td>
+							</tr>
+						{{/list}}
+						</script>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="paging clearfix" id="advanced-search-paging">
+				<div class="page-info">
+					<span class="records">共<span data-id="recordCount">0</span>条记录</span>
+					<span class="slash">/</span>
+					<span class="page-count">共<span data-id="pageCount">0</span>页</span>
+					<span class="current">（当前第<span data-id="curPageView">1</span>页）</span>
+				</div>
+				<div class="pagination" data-id="btns">
+				    <a data-id="top" class="page-ctrl-btn top" href="javascript:void(0);"></a>
+				    <a data-id="prev" class="page-ctrl-btn prev" href="javascript:void(0);"></a>
+				    <a data-id="" class="text-link" href="javascript:void(0);"></a>
+				    <span class="page-btns" data-id="pageBtns">
+				    </span>
+				    <a data-id="next" class="page-ctrl-btn next" href="javascript:void(0);"></a>
+				    <a data-id="bottom" class="page-ctrl-btn bottom" href="javascript:void(0);"></a>
+				    <input data-id="curPage" class="input-box page-input" type="text">
+				    <a data-id="go" class="btn goto-btn" href="javascript:;">跳转</a>
+				</div>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,25 @@
+/* crumbs */
+.page-crumbs {
+	height: 30px;
+	background-color: #3e495d;
+	line-height: 30px;
+}
+.page-crumbs .list {
+	overflow: hidden;
+}
+.page-crumbs .list .item {
+	float: left;
+	padding: 0 10px 0 16px;
+	background: url(images/crumbs_arrow.png) no-repeat center left;
+	color: #fff;
+}
+.page-crumbs .list .item:first-child {
+	background: none;
+	padding-left: 12px;
+}
+.page-crumbs .list .item:last-child .text-link2 {
+	font-weight: bold;
+}
+.page-crumbs .list .item .text-link2 {
+	color: #fff;
+}

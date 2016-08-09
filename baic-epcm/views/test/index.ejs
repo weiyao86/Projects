@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>测试富表单提交</title>
+</head>
+<body>
+<form method="post" action="/testRichForm" enctype="multipart/form-data">
+  <input type="text" name="username"/>
+  <input type="text" name="title"/>
+  <input type="file" name="image"/>
+  <input type="file" name="imag1"/>
+  <input type="file" name="docx"/>
+  <input type="submit" value="提交">
+  <br />
+  <a href="/testRichForm/download">下载文件</a>
+</form>
+</body>
+</html>

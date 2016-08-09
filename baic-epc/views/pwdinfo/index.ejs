@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<%
+  viewBag.pageCode = 'pwdInfo';
+  viewBag.cssFiles = ['pwd_info'];
+  viewBag.releaseCss = 'pwdInfo.min';
+%>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <title><%= pageTitle %></title>
+
+  <% if (viewBag.isLocal) { %>
+  <link type="text/css" rel="stylesheet" href="/styles/common.css" />
+  <link type="text/css" rel="stylesheet" href="/styles/pwd_info.css" />
+  <% } else { %>
+  <link type="text/css" rel="stylesheet" href="/release/styles/pwd_info.min.css" />
+  <% } %>
+
+  <% include ../config/globalConfig.ejs %>
+  <% include ../config/requirejsConfig.ejs %></head>
+<body>
+
+ <div class="container">
+    <div class="header">
+      <div class="flag-title">
+        <span class="text-center">EPC电子配件目录</span>
+        <span class="text-after"></span>
+      </div>
+      <div class="center">
+        <div class="website-title">
+          <span class="web-title-text" title="北京汽车"></span>
+        </div>
+        <div class="menu clearfix">
+          <ul class="list">
+            <li>
+              <span>已有帐户,马上<a href="#" class="wrap-line">登录</a></span>
+            </li>
+            <li>
+              <a href="#" class="wrap-line">返回上一页</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div id="body_pwdinfo" class="body">
+      <div class="banner">
+        <div class="content">
+          <p class="c-title">找回密码</p>
+          <div class="c-content">
+           <p>
+              <input type="text"  class="input-box c-input-text" placeholder="请输入用户名">
+            </p>
+            <p class="c-btn">
+              <a href="#" class="btn-download">下一步</a>
+            </p>
+            <p class="c-last-version">
+              <span>请注意：如果您是DMS系统的用户，请在DMS系统内找回密码，谢谢！</span>
+            </p>
+
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    <!-- <div class="footer">
+      <div class="f-title">使用说明</div>
+     
+    </div> -->
+
+  </div>
+  <% include ../common/footer.ejs %>

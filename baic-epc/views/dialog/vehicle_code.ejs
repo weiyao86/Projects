@@ -1,0 +1,69 @@
+	<div class="layer vehicle-code-layer" id="vehicle-code-dialog">
+		<div class="layer-title">
+			<span class="page-title"><span class="text">整车编码搜索</span></span>
+			<a class="layer-close-btn" href="javascript:;"></a>
+		</div>
+		<div class="layer-cont-wrapper">
+			<div class="vehicle-code-search" id="vehicle-code-query">
+				<div class="data-item">
+					<span class="label">
+						<span class="text">整车编码：</span>
+					</span>
+					<input type="text" data-name="vehicleCode" class="input-box">		
+				</div>
+				<div class="data-item operation">
+					<a class="btn" href="javascript:;" data-id="search">查询</a>
+					<a class="btn secondary" href="javascript:;" data-id="reset">清空</a>
+				</div>
+			</div>
+			<div class="vehicle-code-search-cont" id="vehicle-code-result">
+				<script type="text/template">
+				{{#record}}
+				<div class="data-item">
+					<span class="label"><span class="text">VIN：</span></span>
+					<span class="text-block">{{vinNo}}</span>
+				</div>
+				<div class="data-item">
+					<span class="label"><span class="text">生产日期：</span></span>
+					<span class="text-block">{{manufactureDate}}</span>
+				</div>
+				<div class="data-item">
+					<span class="label"><span class="text">整车编码：</span></span>
+					<span class="text-block">{{vehicleCode}}</span>
+				</div>
+				<div class="data-item">
+					<span class="label"><span class="text">整车描述：</span></span>
+					<span class="text-block">{{vehicleName}}</span>
+				</div>
+				<div class="data-item">
+					<span class="label"><span class="text">车型代码：</span></span>
+					<span class="text-block">{{subModelCode}}</span>
+				</div>
+				<div class="data-item">
+					<span class="label"><span class="text">车型名称：</span></span>
+					<span class="text-block">{{subModelName}}</span>
+				</div>
+				<div class="data-item">
+					<span class="label"><span class="text">配置编码：</span></span>
+					<span class="text-block">{{configCode}}</span>
+				</div>
+				<div class="data-item">
+					<span class="label"><span class="text">配置名称：</span></span>
+					<span class="text-block">{{configName}}</span>
+				</div>
+				<div class="data-item">
+					<span class="label"><span class="text">内饰：</span></span>
+					<span class="text-block">{{trimName}}</span>
+				</div>
+				<div class="data-item">
+					<span class="label"><span class="text">外饰：</span></span>
+					<span class="text-block">{{extrimName}}</span>
+				</div>
+				<div class="layer-operation">
+					<a class="btn" href="javascript:;">进入目录</a>
+				</div>
+				{{/record}}
+				</script>
+			</div>
+		</div>
+	</div>

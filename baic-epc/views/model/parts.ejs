@@ -1,0 +1,57 @@
+<div class="parts" id="parts">
+  <div class="parts-head">
+    <ul>
+      <li class="row-number"><span>序号</span></li>
+      <li class="part-number"><span>配件件号</span></li>
+      <li class="part-name"><span>配件名称</span></li>
+      <li class="qty"><span>用量</span></li>
+      <li class="remark"><span>配件备注</span></li>
+      <li class="model"><span>适用</span></li>
+      <li class="operation"><span>操作</span></li>
+    </ul>
+  </div>
+  <div class="parts-body" id="parts-body">
+    <script type="text/template">
+      {{#records}}
+      <div data-field="row" class="list-item" data-id="{{id}}" data-callout="{{callout}}">
+        <div class="item row-number">
+          <div class="item-cont-wrap text-center"><span>{{rowNumber}}</span></div>
+        </div>
+        <div class="item part-number">
+          <div class="item-cont-wrap">
+            <div class="number"><a target="_blank" href="../../../detail?partNo={{partNo}}" class="text-link">{{partNo}}</a></div>
+            <div class="icon-wrap">
+              <a class="icon supersession"></a>
+              <a class="icon note"></a>
+              <a class="icon image"></a>
+              <a class="icon price"></a>
+            </div>
+          </div>
+        </div>
+        <div class="item part-name">
+          <div class="item-cont-wrap">
+            <div class="name"><span>{{partName}}</span></div>
+            <div class="date"><span>{{validDate}}</span></div>
+          </div>
+        </div>
+        <div class="item qty">
+          <div class="item-cont-wrap text-center"><span>{{qty}}</span></div>
+        </div>
+        <div class="item remark">
+          <div class="item-cont-wrap"><span>{{partNote}}</span></div>
+        </div>
+        <div class="item model text-center">
+          <div class="item-cont-wrap">
+            <a href="javascript:;" class="text-link">更多</a>
+          </div>
+        </div>
+        <div class="item operation">
+          <div class="item-cont-wrap text-center">
+            <a href="javascript:;" class="icon-btn add-cart"><span class="icon"></span><span class="text"></span></a>
+          </div>
+        </div>
+      </div>
+      {{/records}}
+    </script>
+  </div>      
+</div>

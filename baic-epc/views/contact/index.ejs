@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<%
+  viewBag.pageCode = 'contact';
+  viewBag.cssFiles = ['contact'];
+  viewBag.releaseCss = 'contact.min';
+%>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+  <title><%= pageTitle %></title>
+
+  <% if (viewBag.isLocal) { %>
+  <link type="text/css" rel="stylesheet" href="/styles/common.css" />
+  <link type="text/css" rel="stylesheet" href="/styles/contact.css" />
+  <% } else { %>
+  <link type="text/css" rel="stylesheet" href="/release/styles/contact.min.css" />
+  <% } %>
+
+  <% include ../config/globalConfig.ejs %>
+  <% include ../config/requirejsConfig.ejs %></head>
+<body>
+
+  <!--begin body-->
+  <div class="box-contact">
+
+    <div class="wrap">
+      <div class="wrap-row">
+        <div id="container" class="container">
+          <div class="header">北汽电子配件目录信息管理系统</div>
+          
+          <div class="body clearfix">
+            <div class="row row-login body-title">
+             <span>联系客服</span>
+            </div>
+
+
+            <div class="row row-login">
+             <span class="label-date">联系客服时间:</span>
+             <span class="label-content">工作日:7:00-9:00</span>
+            </div>
+
+             <div class="row row-login bq-icon">
+             <span class="lt-bq-icon"></span>
+             <span class="rt-bq-icon"></span>
+            </div>
+
+            <div class="row row-login tel">
+             <span class="label-date">轿车联系电话:</span>
+             <span class="label-content">010-54354344</span>
+            </div>
+
+            <div class="row row-login tel">
+             <span class="label-date">威旺联系电话:</span>
+             <span class="label-content">010-54354344</span>
+            </div>
+
+            <div class="row row-login">
+              <input type="button" id="btn_back" class="btn-back" value="返回">
+            </div>
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end body-->
+  <% include ../common/footer.ejs %>

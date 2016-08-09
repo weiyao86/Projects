@@ -1,0 +1,22 @@
+<script type="text/javascript">
+  var globalConfig = {
+    context: {
+      path: '',
+      catalogUrl: '../catalog',
+      modelUrl: '../model',
+      usageUrl: '../usage'
+    },
+    trans: {}
+  };
+  var pageConfig = {
+    pageCode: '<%= viewBag.pageCode %>',
+    isLocal: <%= viewBag.isLocal %>,
+    releaseVersion: '<%= viewBag.releaseVersion %>'
+  };
+  var hasSVG = function() {
+        var SVG_NS = 'http://www.w3.org/2000/svg';
+
+        return !!document.createElementNS &&
+            !!document.createElementNS(SVG_NS, 'svg').createSVGRect;
+    };
+</script>

@@ -1,0 +1,54 @@
+<ul>
+	<% if (items && items.length > 0) { %>	
+		<% items.forEach(function(item){ %>
+		    <li data-code="<%= item.id %>">
+		    	<% if(item.children){ %>
+		        <a href="javascript:;" data-level="{{level}}" data-code="<%= item.id %>" data-leaf="<%= item.leaf %>">
+		        <% } else { %>
+		        <a href="../usage/<%= item.id %>" data-level="{{level}}" data-code="<%= item.id %>" data-leaf="<%= item.leaf %>" class="leaf">
+		        <% } %>
+		        	<span data-field="icon" class="icon"></span><span data-field="text" class="text"><%= item.name %></span>		        	
+		        </a>
+		        <% if(item.children){ %>
+		        	<%- include('../common/groupTemplate', {items: item.children}) %>
+		        <% } %>
+		    </li>
+	    <% }) %>	
+	<% } %>
+</ul>
+
+
+<% if (groups && groups.length > 0) { %>
+	<% groups.forEach(function(group){ %>
+		<li data-code="<%= group.code %>">
+			<a href="javascript:;" data-level="" data-code="<%= group.code %>">
+	        	<span data-field="icon" class="icon"></span>
+	        	<span data-field="text" class="text"><%= group.name %></span>		        	
+	        </a>
+	        <ul>
+	        	<% if(group.subGroup && group.subGroup.length > 0){ %>
+	        		<% group.subGroup.forEach(function(subgroup){ %>
+			        	<li>
+			        		<a href="javascript:;" data-level="" data-code="<%= subgroup.code %>">
+					        	<span data-field="icon" class="icon"></span>
+					        	<span data-field="text" class="text"><%= subgroup.name %></span>		        	
+					        </a>
+					        <ul>
+					        	<% if(subgroup.images && subgroup.images.length > 0){ %>
+									<% subgroup.images.forEach(function(imamge){ %>
+									<li>
+										<a href="../usage/<%= imamge.code %>" data-code="<%= imamge.code %>" class="leaf">
+											<span class="icon"></span>
+											<span class="text"><%= imamge.name %></span>
+										</a>
+									</li>
+									<% }) %>
+								<% } %>
+					        </ul>
+			        	</li>
+			        	<% }) %>
+	        	<% } %>
+	        </ul>
+		</li>
+	<% }) %>
+<% } %>

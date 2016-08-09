@@ -1,0 +1,7 @@
+    <% if (viewBag.isLocal) { %>
+      <script type="text/javascript" src="/scripts/bootstrap.js"></script>
+    <% } else { %>
+      <script type="text/javascript" src="/release/scripts/bootstrap.js?v=<%= viewBag.releaseVersion %>"></script>
+    <% } %>
+  </body>
+</html>

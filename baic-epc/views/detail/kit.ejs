@@ -1,0 +1,30 @@
+<div class="detail-table-item kit" data-field="kit">
+	<div class="grid" id="kit-table" data-urls='{"read":"/detail/getKit?partNo=<%= partInfo.partNo %>"}'>
+		<table>
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>隶属总成件号</th>
+					<th>隶属总成件号名称</th>
+					<th>维修包件号</th>
+					<th>维修包备注</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody data-id="grid-result">
+				<script type="text/template">
+					{{#list}}
+					<tr>
+						<td>{{rowNumber}}</td>
+						<td>{{partCode}}</td>
+						<td>{{partName}}</td>
+						<td>{{partCode}}</td>
+						<td>{{note}}</td>
+						<td><a class="text-link" data-action="view-detail" data-partCode="{{partCode}}" href="javascript:;">查看详情</a></td>
+					</tr>
+					{{/list}}
+				</script>
+			</tbody>
+		</table>
+	</div>
+</div>

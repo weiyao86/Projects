@@ -1,0 +1,47 @@
+html { height: 100%; font-size: 12px; font-family: "Microsoft YaHei", Arial, sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { color: #414141; margin: 0; height: 100%; background: #EDEDED; }
+ul, p { margin: 0; padding: 0; }
+.clearfix:after, .clearfix:before { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+.header .website-title .web-title-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.container { margin: 0 auto 10px; min-width: 1000px; min-height: 700px; }
+.header { height: 116px; line-height: 116px; position: relative; }
+.header .flag-title { position: absolute; left: 0; top: 0; color: #fff; height: 20px; }
+.header .flag-title .text-before { }
+.header .flag-title .text-center { display: block; float: left; height: 20px; line-height: 20px; background: #3E495D; color: #fff; font-weight: bold; padding: 0 10px; }
+.header .flag-title .text-after { display: block; float: left; width: 16px; height: 20px; background: url(images/flag_after.png) no-repeat top; }
+.header .center { width: 1000px; margin: 0 auto; }
+.header .website-title { float: left; margin-top: 25px; }
+.header .website-title .text-before { display: block; float: left; width: 10px; height: 30px; }
+.header .website-title .web-title-text { display: block; float: left; height: 65px; width: 257px; background: url(images/pac_logo.png) no-repeat center; line-height: 65px; color: #fff; font-weight: bold; }
+.header .website-title .text-after { display: block; float: left; width: 20px; height: 30px; }
+.header .menu { text-align: right; }
+.header .menu .list { list-style: none; margin: 0; padding: 0; float: right; }
+.header .menu .list > li { float: left; font-size: 14px; }
+.header .menu .list > li:first-child .wrap-line { border: 0; padding: 0 15px 0 5px; }
+.header .menu .list > li .wrap-line { color: #003c78; border: 0; border-style: solid; border-color: #d0d7de; border-left-width: 1px; padding: 0 15px; }
+.body { height: 580px; }
+.body .banner { background: #fff; width: 1000px; height: 100%; overflow: hidden; margin: 0 auto; }
+.body .banner .content { position: relative; height: 99.9%; }
+.body .banner .content .c-title { font-size: 18px; color: #333; font-weight: bold; margin: 30px; }
+.body .banner .content .c-content { width: 540px; margin: 0 auto; }
+.body .banner .content .c-content .c-input-text { width: 528px; height: 55px; line-height: 55px; font-size: 30px; padding-left: 10px; vertical-align: middle; margin: 100px 0 25px; }
+.body .banner .content .c-content .c-btn { margin: 20px 0 10px; }
+.body .banner .content .c-content .c-btn .btn-download { font-size: 24px; font-weight: bold; text-align: center; height: 55px; line-height: 55px; background: #C2161A; color: #fff; display: block; text-decoration: none; font-size: 20px; }
+.body .banner .content .c-content .c-btn .btn-download:hover { background: #ff3333; transition: all .2s ease; }
+.body .banner .content .c-content .c-last-version { font-size: 14px; color: #d1251a; font-weight: bold; margin-top: 10px; }
+.footer { width: 1000px; margin: 0 auto; color: #414141; }
+.footer .f-title { background: url("../images/directions.png") no-repeat bottom left #fff; text-indent: 30px; font-size: 20px; margin: 10px auto; }
+.footer .f-content .cell { width: 33.333333%; float: left; margin: 10px auto; text-align: center; overflow: hidden; }
+.footer .f-content .step-1 { background: url("../images/step-1.png") no-repeat top center #fff; }
+.footer .f-content .step-2 { background: url("../images/step-2.png") no-repeat top center #fff; }
+.footer .f-content .step-3 { background: url("../images/step-3.png") no-repeat top center #fff; }
+.footer .f-content .step-p { color: #2581c4; font-size: 14px; margin: 135px 0 5px; font-weight: bold; }
+.lang-wrap { display: inline-block; position: relative; text-decoration: none; }
+.lang-wrap:hover .dropdown { display: block; }
+.dropdown { position: absolute; background: #fff; display: none; border: 1px solid #fff; text-align: center; top: 45px; left: 0; border-radius: 4px; min-width: 100px; }
+.dropdown li { list-style: none; border-radius: 4px; line-height: 25px; }
+.dropdown li:hover { background: #348AD7; transition: all .2s ease; }
+.dropdown li:hover a { color: #fff; }
+.dropdown li a { text-decoration: none; color: #414141; display: block; }

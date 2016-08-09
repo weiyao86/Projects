@@ -1,0 +1,52 @@
+<div class="detail-table-item suppersession" data-field="supersession">
+	<div class="grid" id="supersession-table" data-urls='{"read":"/detail/getSupersession?partNo=<%= partInfo.partNo %>"}'>
+		<table>
+			<thead>
+				<tr>
+					<th style="width: 10%;">旧件号/旧替换组编码</th>
+					<th style="width: 15%;">旧件名称/旧替换组描述</th>
+					<th style="width: 10%;">新件号/新替换组编码</th>
+					<th style="width: 15%;">新件名称/新替换组描述</th>
+					<th style="width: 10%;">是否组替换</th>
+					<th style="width: 10%;">替换类型</th>
+					<th style="width: 10%;">断点信息</th>
+					<th style="width: 10%;">备注</th>
+					<th style="width: 10%;">操作</th>
+				</tr>
+			</thead>
+			<tbody data-id="grid-result">
+				<script type="text/template">
+					{{#list}}
+					<tr>
+						<td>
+							{{#isOld}}
+								{{oldCode}}
+							{{/isOld}}
+							{{^isOld}}
+								<a href="/detail?partNo={{oldCode}}" target="_blank" class="text-link">{{oldCode}}</a>
+							{{/isOld}}
+						</td>
+						<td>{{oldDesc}}</td>
+						<td>
+							{{#isNew}}
+								{{newCode}}
+							{{/isNew}}
+							{{^isNew}}
+								<a href="/detail?partNo={{newCode}}" target="_blank" class="text-link">{{newCode}}</a>
+							{{/isNew}}
+						</td>
+						<td>{{newDesc}}</td>
+						<td>{{#group}}是{{/group}}{{^group}}否{{/group}}</td>
+						<td>{{substituteType}}</td>
+						<td>{{breakPointNote}}</td>
+						<td>{{note}}</td>
+						<td>
+							{{#group}}<a data-action="supersession-detail" data-code="{{code}}" href="javascript:;">详情</a>{{/group}}
+						</td>
+					</tr>
+					{{/list}}
+				</script>
+			</tbody>
+		</table>
+	</div>
+</div>

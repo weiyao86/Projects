@@ -1,0 +1,60 @@
+<%
+  viewBag.pageCode = 'catalog';
+  viewBag.cssFiles = ['crumbs', 'catalog'];
+  viewBag.releaseCss = '';
+%>
+<% include ../common/header.ejs %>
+<% include ../common/crumbs.ejs %>
+<!--begin body-->
+	<div class="page-cont">
+		<div class="catalog">
+			<div class="brand" id="brand-tab">
+				<ul class="list">
+				    <% brands.forEach(function (brand){ %>
+						<li data-type="brand" data-code="<%= brand.code %>" data-text="<%= brand.name %>" class="item active"><a href="javascript:;"><%= brand.name %></a></li>
+					<% }) %>					
+				</ul>
+			</div>
+			<div class="series" id="series-wrap">
+				<% brands.forEach(function (brand){ %>			
+				<ul data-brandCode="<%= brand.code %>" class="list clearfix">
+					<% brand.series.forEach(function (serie){ %>
+					<li class="item" data-type="series" data-code="<%= serie.code %>" data-text="<%= serie.name %>">
+						<div class="img-wrap">
+							<a href="javascript:;"><img width="128" height="93" src="<%= serie.imageFile %>" alt="title"></a>
+						</div>
+						<p class="img-desc"><a href="javascript:;" class="text-link2" title="title"><%= serie.name %></a></p>
+					</li>
+					<% }) %>
+				</ul>
+				<% }) %>
+			</div>
+		</div>
+		<div class="model">
+			<div class="model-head">车型</div>
+			<div class="model-body" id="model-body">
+				<script type="text/template">
+				{{#records}}
+				<ul class="type-list">
+					<li class="type-item">
+						<div>
+							<span class="type" data-code="{{code}}">
+								<span class="icon" data-action="toggle"></span>
+								<a href="../model?brandCode={{brandCode}}&seriesCode={{seriesCode}}&modelGroupCode={{modelGroupCode}}" class="link">{{name}}</a>
+							</span>
+						</div>
+						<ul class="model-list">
+							{{#models}}
+							<li class="model-item"><span class="icon"></span><a href="../model?brandCode={{brandCode}}&seriesCode={{seriesCode}}&modelCode={{code}}" class="link">{{name}}</a></li>
+							{{/models}}
+						</ul>
+					</li>
+				</ul>
+				{{/records}}
+				</script>
+			</div>
+		</div>
+	</div>
+
+<!--end body-->
+<% include ../common/footer.ejs %>

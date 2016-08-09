@@ -1,0 +1,62 @@
+.main-cont {
+
+}
+.main-cont .header {
+	height: 30px;
+	line-height: 30px;
+	background-color: #3e495d;
+	padding-left: 10px;
+}
+.main-cont .header .text {
+	color: #fff;
+}
+.main-cont .content {
+	padding: 10px;
+}
+.main-cont .content .item {
+	font-size: 14px;
+	font-weight: bold;
+}
+.data-item.single {
+	float: left;
+	min-width: 330px;
+}
+.data-item.fix {
+	clear: both;
+}
+.data-item.middle-text .btn{
+	margin-left: 0px;
+}
+.data-item.middle-text .text-link {
+	margin: 0 10px;
+}
+.data-item.link-text .text-link {
+	margin: 0 50px 0 20px;
+}
+
+.data-item.single .form-select-option-list {
+	float: left;
+	width: 178px;
+}
+#tab-cont {
+	padding-top: 5px;
+}
+.btn-wrapper {
+	clear: both;
+	padding: 25px 0 15px;
+	text-align: center;
+}
+.data-item .date-input-splite {
+	margin: 0 5px;
+	font-size: 14px;
+}
+.data-item .data-input-box {
+	width: 98px;
+}
+.textarea-box.small {
+	width: 200px;
+	height: 65px;
+}
+.layer.question-close-layer {
+	width: 400px;
+}

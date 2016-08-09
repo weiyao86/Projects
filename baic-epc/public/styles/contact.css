@@ -1,0 +1,181 @@
+html {
+    font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    *background: #8D9093;
+}
+
+.box-contact {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    background: url("images/login_bg.png") no-repeat center #8D9093;
+}
+
+.wrap {
+    position: absolute;
+    display: table;
+    width: 100%;
+    height: 100%;
+    *top: 50%;
+    *height: auto;
+}
+
+.wrap .wrap-row {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    *top: -50%;
+    z-index: 10;
+}
+
+.container {
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 2px;
+    width: 460px;
+    padding-bottom: 10px;
+    opacity: .95;
+    box-shadow: 0px 0px 50px 5px rgba(132, 134, 139, .5);
+}
+
+.container .header {
+    padding: 18px 0 14px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #d1251a;
+    text-align: center;
+}
+
+.container .body {
+    font-weight: bold;
+    width: 280px;
+    margin: 5px auto 10px;
+}
+
+.row,
+.row .cell {
+    float: left;
+}
+
+.row {
+    margin: 10px 0;
+}
+
+.row-login {
+    height: 36px;
+    line-height: 36px;
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.bq-icon {
+    height: auto;
+}
+
+.row-login .label {
+    width: 70px;
+}
+
+.row-login .label-date {
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.row-login .label-content {
+    color: #555;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.row-login .lt-bq-icon,
+.row-login .rt-bq-icon {
+    display: inline-block;
+    width: 100px;
+    height: 65px;
+    background: url("images/beiqi-icon.png") no-repeat center #fff;
+}
+
+.row-login .rt-bq-icon {
+    border: 0;
+    border-style: solid;
+    border-color: #e3e3e3;
+    border-left-width: 1px;
+    background: url("images/beiqiweiwang-icon.png") no-repeat center #fff;
+}
+
+.row-login.tel {
+    height: 20px;
+    line-height: 20px;
+}
+
+.row-login .btn-back {
+    font-weight: bold;
+    width: 100px;
+    background: #d1251a;
+    color: #fff;
+    text-align: center;
+    border: none;
+    outline: none;
+    height: 30px;
+}
+
+.row-login .btn-back:hover {
+    cursor: pointer;
+    background: #ff3333;
+    transition: all .2s ease;
+}
+
+.text-wrap {
+    width: 250px;
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: normal;
+    height: 16px;
+    line-height: 16px;
+}
+
+.row-login .forget-pwd {
+    color: #224e82;
+}
+
+.row-login .text-desc {
+    float: right;
+}
+
+.body-title {
+    font-size: 20px;
+}
+
+.form-select-login {
+    height: 34px;
+    width: 182px;
+}
+
+.form-select-login .form-select-switch-btn {
+    color: #898989;
+    height: 32px;
+    line-height: 32px;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}

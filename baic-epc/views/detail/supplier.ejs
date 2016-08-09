@@ -1,0 +1,28 @@
+<div class="detail-table-item supplier" data-field="supplier">
+	<div class="grid" id="supplier-table" data-urls='{"read":"/detail/getSupplier?partNo=<%= partInfo.partNo %>"}'>
+		<table>
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>供应商编码</th>
+					<th>供应商名称</th>
+					<th>供应商联系方式</th>
+					<th>备注</th>
+				</tr>
+			</thead>
+			<tbody data-id="grid-result">
+				<script type="text/template">
+					{{#list}}
+					<tr>
+						<td>{{rowNumber}}</td>
+						<td>{{code}}</td>
+						<td>{{name}}</td>
+						<td>{{phone}}</td>
+						<td>{{note}}</td>
+					</tr>
+					{{/list}}
+				</script>
+			</tbody>
+		</table>
+	</div>
+</div>
